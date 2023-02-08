@@ -8,7 +8,9 @@ import { join } from 'path';
 @Module({
   imports: [EmployeeModule, ProjectModule,GraphQLModule.forRoot(
     {
-      autoSchemaFile: join(process.cwd(), 'src/graphql-schema.gql')
+      autoSchemaFile: join(process.cwd(), 'src/graphql-schema.gql'),
+      debug:true ,
+      playground:true
     }
   ),
     TypeOrmModule.forRoot({
